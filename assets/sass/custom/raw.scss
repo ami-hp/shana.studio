@@ -1,0 +1,125 @@
+/*==================================================
+=== Scroll ==== == = -- -
+==================================================*/
+
+
+.c\:scroll-trans::-webkit-scrollbar {
+    width: 1px;
+}
+
+.c\:scroll-trans::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.c\:scroll-trans::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.c\:scroll-trans::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+
+.c\:scroll-y-auto{
+    overflow-y: auto;
+}
+.c\:scroll-y-hide{
+    overflow-y: hidden;
+}
+.c\:scroll-x-hide{
+    overflow-x: hidden;
+}
+
+
+
+/*==================================================
+=== Unordered List ==== == = -- -
+==================================================*/
+.c\:unstyled li{
+    list-style: none;
+}
+
+
+
+
+/*==================================================
+=== Buttons ==== == = -- -
+==================================================*/
+.c\:no-btn{
+    background: unset!important;
+    border: unset!important;
+    color: inherit!important;
+}
+
+
+
+
+/*==================================================
+=== Table ==== == = -- -
+==================================================*/
+.c\:center-table{
+    display:table-cell;
+    vertical-align:middle;
+}
+
+
+
+/*==================================================
+=== Box Shadow ==== == = -- -
+==================================================*/
+.c\:box-shadow{
+    box-shadow: 0 0 21px 4px rgb(242 242 242);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+}
+.c\:box-shadow-commerce{
+    /*box-shadow: 0 0 21px 4px rgb(242 242 242);*/
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+}
+
+/*==================================================
+=== Text ==== == = -- -
+==================================================*/
+.c\:text-flow\:hidden{
+    text-overflow:ellipsis;
+}
+.c\:text-lastline-center{
+    text-align-last: center;
+}
+.c\:text-lastline-right{
+    text-align-last: right;
+}
+.c\:nextline{
+    white-space: initial;
+    word-wrap: break-word;
+}
+
+
+
+/*==================================================
+=== Overflow ==== == = -- -
+==================================================*/
+.c\:overHidden{
+    overflow: hidden;
+}
+
+
+
+/*==================================================
+=== Others ==== == = -- -
+==================================================*/
+.c\:selectable-none , [data-selectable=false]{
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.c\:align-inherit{
+    vertical-align: inherit!important;
+}

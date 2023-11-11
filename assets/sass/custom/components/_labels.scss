@@ -1,0 +1,11 @@
+//==================================================
+//=== Label ==== == = -- -
+//==================================================
+$labels: ("danger": #d9534f,);
+@each $key , $value in $labels {
+    .c\:label-#{$key} {
+        color: #{$value};
+        background-color: unset;
+        border: 1px solid #{$value};
+    }
+}

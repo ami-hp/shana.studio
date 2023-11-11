@@ -1,0 +1,93 @@
+
+//! Colors Start
+$purples : (
+    '100' : lighten(#703FC4 , 40%),
+    '200' : lighten(#703FC4 , 30%),
+    '300' : #b489ff,
+    '400' : lighten(#703FC4 , 15%),
+    '500' : #703FC4,
+    '600' : darken(#703FC4 , 15%),
+    '700' : darken(#703FC4 , 20%),
+    '800' : darken(#703FC4 , 30%),
+    '900' : #0C1620,
+);
+
+$primaries : $purples;
+$secondaries : "";
+
+$bg-color-light : #fff;
+$bg-color-grey : #E5E5E5;
+$bg-backdrop : rgba(0,0,0,0.56);
+
+$font-color-light : white;
+$font-color-dark : #0d161f;
+$font-color-desc : #798289;
+$font-color-sub : #bbbbbb;
+//! Colors End
+
+
+
+
+
+//? Typography Start
+$font-size-base: 0.9rem;
+$font-size-desc: 0.6rem;
+$line-height-base: 1.6;
+$line-height-title: 1.3;
+
+$line-heights : (
+    'desc' : 2,
+    'desc-md' : 2.8,
+);
+
+$font-weights : (
+    'reg'  : 400,
+    'med'  : 500,
+    'bold' : bold,
+);
+
+$font-sizes-base: (
+    'title' :    $font-size-base * 2.5,
+    'desc':      $font-size-base,
+);
+
+$font-breakpoints : ('small' : 0.6 , 'medium' : 0.75 , 'large' : 1);
+
+$font-title : (
+    'small'  : map-get($font-sizes-base , 'title') * 0.6,
+    'medium' : map-get($font-sizes-base , 'title') * 0.75,
+    'large'  : map-get($font-sizes-base , 'title'),
+);
+$font-desc : (
+    'small'  : 12px,
+    'medium' : 14px,
+    'large'  : 16px,
+);
+$font-card-title : (
+    'large'  : 16px,
+    'medium' : 14px,
+    'small'  : 12px,
+);
+$font-card-desc : (
+    'large'  : 13px,
+    'medium' : 12px,
+    'small'  : 11px,
+);
+//? Typography End
+
+
+//Z-index
+$z-index-header : 5;
+$z-index-content : 0;
+$z-indexes : (
+    'menu'   :  6,
+    'header' :  5,
+    'content':  0,
+    'under'  : -1,
+);
+//Border-radius
+$radiuses : (
+    'circle' : 1000px,
+    'shana'  : 25px,
+    'form'  : 10px,
+);

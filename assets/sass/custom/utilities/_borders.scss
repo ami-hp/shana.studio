@@ -1,0 +1,32 @@
+//==================================================
+//=== Border ==== == = -- -
+//==================================================
+@for $i from 1 through 3 {
+
+    .c\:border-#{$i}{
+        border: #{$i}px solid;
+    }
+
+    .c\:border-y-#{$i}{
+        border-top: #{$i}px solid;
+        border-bottom: #{$i}px solid;
+    }
+    .c\:border-x-#{$i}{
+        border-left: #{$i}px solid;
+        border-right: #{$i}px solid;
+    }
+
+    .c\:border-t-#{$i}{
+        border-top: #{$i}px solid;
+    }
+    .c\:border-b-#{$i}{
+        border-bottom: #{$i}px solid;
+    }
+    .c\:border-r-#{$i}{
+        border-right: #{$i}px solid;
+    }
+    .c\:border-l-#{$i}{
+        border-left: #{$i}px solid;
+    }
+
+}

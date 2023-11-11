@@ -1,0 +1,102 @@
+//==================================================
+//=== Width ==== == = -- -
+//==================================================
+.c\:w-0{
+    width: 0;
+}
+.c\:mw-content{
+    max-width: max-content;
+}
+.c\:mw-content\!{
+    max-width: max-content!important;
+}
+.c\:w-content{
+    width: max-content;
+}
+.c\:w-content\!{
+    width: max-content!important;
+}
+.c\:w-fit{
+    width: fit-content;
+}
+@for $i from 1 through 50 {//pixel
+    $w : $i * 10;
+    .c\:w-#{$w}x {
+        width: #{$w}px;
+    }
+    .c\:mw-#{$w}x {
+        max-width: #{$w}px;
+    }
+}
+@for $i from 1 through 20 {//Percent
+    $name : $i * 5;
+    $value : percentage($i * 5)/100;
+    .c\:w-#{$name} {
+        max-width: #{$value};
+    }
+    .c\:mw-#{$name} {
+        max-width: #{$value};
+    }
+}
+
+
+
+///*==================================================
+//=== Height ==== == = -- -
+//==================================================*/
+.c\:h-0{
+    height: 0;
+}
+.c\:h-content{
+    max-height: max-content;
+}
+.c\:maxh-content\!{
+    max-height: max-content!important;
+}
+.c\:h-content{
+    height: max-content;
+}
+.c\:h-content-imp{
+    height: max-content!important;
+}
+.c\:h-fit{
+    height: fit-content;
+}
+.c\:h-calc40{
+    height: calc(100% - 40px);
+}
+.c\:h-calc50{
+    height: calc(100% - 50px);
+}
+.c\:h-calc70{
+    height: calc(100% - 70px);
+}
+//@for $i from 1 through 50 {//pixel
+//    $h : $i * 10;
+//    .c\:h-#{$h}x {
+//        height: #{$h}px;
+//    }
+//    .c\:mh-#{$h}x {
+//        max-height: #{$h}px;
+//    }
+//}
+@for $i from 1 through 20 {//percent
+    $h : $i * 5;
+    $per : percentage($i * 5)/100;
+
+    .c\:h-#{$h} {
+        height: #{$per};
+    }
+}
+
+
+/*Bootstrap*/
+// stylelint-disable declaration-no-important
+
+// Width and height
+
+//@each $prop, $abbrev in (width: w, height: h) {
+//    @each $size, $length in $sizes {
+//        .#{$abbrev}-#{$size} { #{$prop}: $length !important; }
+//    }
+//}

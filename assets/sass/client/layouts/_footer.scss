@@ -1,0 +1,91 @@
+//footer
+.footer-subscribe-box{
+    .subscribe-title{
+        color:$font-color-light;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: $line-height-base;
+    }
+
+}
+.shana\:form-pill{
+    width: 90%;
+    max-width: 450px;
+    display: block;
+    margin: 0 auto;
+
+    .shana\:form-group{
+        $border-radius-circle : 1000px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $bg-color-light;
+        border-radius: $border-radius-circle;
+        overflow: hidden;
+
+        font-size: 0.75rem;
+        @include media-lg{
+            font-size: 1rem;
+        }
+
+        &> input[type=text] ,input[type=email] , input[type=tel] , input[type=number]{
+            border: 0;
+            flex: 0 0 66.666667%;
+            max-width: 66.666667%;
+            padding-left: 30px;
+            &::placeholder{
+                color: #ababab;
+            }
+            &:focus{
+                outline: none;
+                box-shadow: unset;
+            }
+
+            &~ button, input[type=submit]{
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+                background-color: purple('300');
+                color: $font-color-light;
+                border-radius: $border-radius-circle ;
+                padding: 15px 0;
+                border: none;
+            }
+        }
+
+
+    }
+}
+
+.footer-links-cols{
+    color: $font-color-light;
+
+    .footer-title{
+        font-size: 16px;
+        font-weight: bold;
+        @include media-lg(){
+            font-size: 18px;
+        }
+    }
+    .footer-links{
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 8px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        @include media-lg(){
+            display: block;
+            margin-top: 15px;
+        }
+
+        li{
+            padding: 13px 0;
+        }
+    }
+
+}
+.footer-border-top{
+    border-top-color: rgba(purple('300') , 0.5)!important;
+}

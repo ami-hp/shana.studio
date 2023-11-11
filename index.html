@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320px, initial-scale=1,minimum-scale=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#703FC4"/>
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#703FC4"/>
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-title" content="Shana">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#703FC4"/>
+
+    <meta name="csrf-token" content="">
+
+    <!-- Preloads -->
+    <!--    <link rel="preload" as="script" href="https://unpkg.com/swiper/swiper-bundle.min.js"/>-->
+    <link rel="preload" as="font"   type="font/woff" href="client/fonts/graphik/woff/Graphik-Regular.woff" crossOrigin="anonymous"/>
+    <link rel="preload" as="style"  type="text/css" href="client/css/fonts/graphik.css"/>
+    <link rel="preload" as="style"  type="text/css" href="client/css/app.css"/>
+
+    <link rel="preload" as="style"  type="text/css" href="client/css/layouts/home.css"       onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" as="style"  type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" as="script" href="https://unpkg.com/swiper/swiper-bundle.min.js"/>
+    <link rel="preload" as="script" href="client/js/layouts/home.js"/>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!--css-->
+    <link media="all" rel="stylesheet" type="text/css" href="client/css/fonts/graphik.css">
+    <link media="all" rel="stylesheet" type="text/css" href="client/css/app.css">
+    <link media="all" rel="stylesheet" type="text/css" href="client/custom/css/custom.css">
+
+    <!--Fav Icon-->
+    <link rel="icon" type="image/png" sizes="192x192" href="client/img/logo/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="client/img/logo/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="client/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="client/img/logo/favicon-16x16.png">
+
+    <title>Shana Studio</title>
+
+
+    <noscript><link media="all" rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css"></noscript>
+    <noscript><link media="all" rel="stylesheet" type="text/css" href="client/css/layouts/home.css"></noscript>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body dir="ltr">
+
+<header class="container-fluid px-0">
+
+    <nav class="container py-2">
+        <div class="row">
+
+            <!-- Aside Menu Trigger -->
+            <div class="col-2 d-flex align-items-center order-last  d-lg-none">
+                <span class="test" data-hunt="menuBack,menu" data-gun="fade,rightSide"><!-- data-parent="parent" -->
+                    <svg class="d-lg-none ml-auto" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.28307 19.8237L20 19.8237M20 5.82373L12.9719 5.82373" stroke="#0C1620" stroke-width="3" stroke-linecap="round"/><path d="M19.9996 12.8237L4 12.8237" stroke="#703FC4" stroke-width="3" stroke-linecap="round"/></svg>
+                </span>
+            </div>
+
+            <!-- LOGO -->
+            <div class="col-8 col-lg-2 order-1 order-lg-first">
+                <div class="d-flex w-100 align-items-center justify-content-center">
+                    <a href="/">
+                        <svg class="head-logo" viewBox="0 0 172 66" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#logo-head-clip0)"><mask id="logo-head-path-1-inside-1" fill="white"><path d="M35.6521 5.32603C35.6521 9.83379 34.7642 14.2974 33.0391 18.462C31.3141 22.6267 28.7857 26.4107 25.5982 29.5982C22.4107 32.7857 18.6267 35.3141 14.462 37.0391C10.2974 38.7642 5.83378 39.6521 1.32603 39.6521V22.8368C3.62558 22.8368 5.90261 22.3839 8.02711 21.5039C10.1516 20.6239 12.082 19.334 13.708 17.708C15.334 16.082 16.6239 14.1516 17.5039 12.0271C18.3839 9.90261 18.8368 7.62558 18.8368 5.32603H35.6521Z"/></mask><path d="M35.6521 5.32603C35.6521 9.83379 34.7642 14.2974 33.0391 18.462C31.3141 22.6267 28.7857 26.4107 25.5982 29.5982C22.4107 32.7857 18.6267 35.3141 14.462 37.0391C10.2974 38.7642 5.83378 39.6521 1.32603 39.6521V22.8368C3.62558 22.8368 5.90261 22.3839 8.02711 21.5039C10.1516 20.6239 12.082 19.334 13.708 17.708C15.334 16.082 16.6239 14.1516 17.5039 12.0271C18.3839 9.90261 18.8368 7.62558 18.8368 5.32603H35.6521Z" stroke="#703FC4" stroke-width="72" mask="url(#logo-head-path-1-inside-1)"/><rect x="34.8044" y="22.1357" width="19.2113" height="19.2113" fill="#0C1620"/><rect x="16" y="41.3472" width="19.2113" height="19.2113" fill="#0C1620"/></g><path d="M75.17 30.42C72.39 30.42 70.14 29.74 68.42 28.38C66.7 27 65.82 25.18 65.78 22.92H69.59C69.63 24.1 70.16 25.05 71.18 25.77C72.2 26.47 73.53 26.82 75.17 26.82C76.71 26.82 77.95 26.56 78.89 26.04C79.85 25.52 80.33 24.84 80.33 24C80.33 23.44 80.08 22.97 79.58 22.59C79.1 22.19 78.46 21.88 77.66 21.66C76.88 21.44 76.01 21.23 75.05 21.03C74.11 20.83 73.16 20.59 72.2 20.31C71.24 20.03 70.36 19.69 69.56 19.29C68.78 18.89 68.14 18.33 67.64 17.61C67.16 16.89 66.92 16.04 66.92 15.06C66.92 13.24 67.67 11.78 69.17 10.68C70.69 9.56 72.69 9 75.17 9C77.23 9 79.04 9.54 80.6 10.62C82.16 11.7 83.18 13.13 83.66 14.91L79.97 15.84C79.73 14.86 79.17 14.08 78.29 13.5C77.41 12.9 76.37 12.6 75.17 12.6C73.89 12.6 72.86 12.83 72.08 13.29C71.3 13.73 70.91 14.32 70.91 15.06C70.91 15.48 71.15 15.85 71.63 16.17C72.13 16.47 72.77 16.72 73.55 16.92C74.35 17.12 75.22 17.33 76.16 17.55C77.12 17.75 78.08 18.01 79.04 18.33C80 18.65 80.87 19.04 81.65 19.5C82.45 19.94 83.09 20.55 83.57 21.33C84.07 22.09 84.32 22.98 84.32 24C84.32 25.92 83.48 27.47 81.8 28.65C80.12 29.83 77.91 30.42 75.17 30.42ZM86.5447 30V9.42H90.5647V17.64H100.045V9.42H104.065V30H100.045V21.24H90.5647V30H86.5447ZM122.893 30L120.823 24.72H112.483L110.443 30H106.123L114.613 9.42H118.753L127.183 30H122.893ZM113.893 21.12H119.413L116.653 14.04L113.893 21.12ZM128.996 30V9.42H133.406L143.516 24.39V9.42H147.536V30H143.126L133.016 15V30H128.996ZM166.34 30L164.27 24.72H155.93L153.89 30H149.57L158.06 9.42H162.2L170.63 30H166.34ZM157.34 21.12H162.86L160.1 14.04L157.34 21.12Z" fill="#703FC4"/><path d="M73.475 60.35C71.1583 60.35 69.2833 59.7833 67.85 58.65C66.4167 57.5 65.6833 55.9833 65.65 54.1H68.825C68.8583 55.0833 69.3 55.875 70.15 56.475C71 57.0583 72.1083 57.35 73.475 57.35C74.7583 57.35 75.7917 57.1333 76.575 56.7C77.375 56.2667 77.775 55.7 77.775 55C77.775 54.5333 77.5667 54.1417 77.15 53.825C76.75 53.4917 76.2167 53.2333 75.55 53.05C74.9 52.8667 74.175 52.6917 73.375 52.525C72.5917 52.3583 71.8 52.1583 71 51.925C70.2 51.6917 69.4667 51.4083 68.8 51.075C68.15 50.7417 67.6167 50.275 67.2 49.675C66.8 49.075 66.6 48.3667 66.6 47.55C66.6 46.0333 67.225 44.8167 68.475 43.9C69.7417 42.9667 71.4083 42.5 73.475 42.5C75.1917 42.5 76.7 42.95 78 43.85C79.3 44.75 80.15 45.9417 80.55 47.425L77.475 48.2C77.275 47.3833 76.8083 46.7333 76.075 46.25C75.3417 45.75 74.475 45.5 73.475 45.5C72.4083 45.5 71.55 45.6917 70.9 46.075C70.25 46.4417 69.925 46.9333 69.925 47.55C69.925 47.9 70.125 48.2083 70.525 48.475C70.9417 48.725 71.475 48.9333 72.125 49.1C72.7917 49.2667 73.5167 49.4417 74.3 49.625C75.1 49.7917 75.9 50.0083 76.7 50.275C77.5 50.5417 78.225 50.8667 78.875 51.25C79.5417 51.6167 80.075 52.125 80.475 52.775C80.8917 53.4083 81.1 54.15 81.1 55C81.1 56.6 80.4 57.8917 79 58.875C77.6 59.8583 75.7583 60.35 73.475 60.35ZM86.3971 60V45.85H81.4471V42.85H94.6971V45.85H89.7471V60H86.3971ZM104.196 60.3C101.996 60.3 100.221 59.6833 98.8705 58.45C97.5205 57.2 96.8455 55.5667 96.8455 53.55V42.85H100.196V53.55C100.196 54.6833 100.562 55.5917 101.296 56.275C102.029 56.9583 102.996 57.3 104.196 57.3C105.379 57.3 106.329 56.9583 107.046 56.275C107.779 55.5917 108.146 54.6833 108.146 53.55V42.85H111.496V53.55C111.496 55.5667 110.821 57.2 109.471 58.45C108.137 59.6833 106.379 60.3 104.196 60.3ZM114.204 60V42.85H120.879C123.496 42.85 125.604 43.6417 127.204 45.225C128.804 46.7917 129.604 48.8583 129.604 51.425C129.604 53.9917 128.804 56.0667 127.204 57.65C125.604 59.2167 123.496 60 120.879 60H114.204ZM117.554 57H120.879C122.496 57 123.796 56.4917 124.779 55.475C125.762 54.4417 126.254 53.0917 126.254 51.425C126.254 49.7583 125.762 48.4167 124.779 47.4C123.796 46.3667 122.496 45.85 120.879 45.85H117.554V57ZM131.709 60V42.85H135.059V60H131.709ZM152.363 57.9C150.73 59.5333 148.572 60.35 145.888 60.35C143.205 60.35 141.047 59.5333 139.413 57.9C137.78 56.2667 136.963 54.1083 136.963 51.425C136.963 48.7417 137.78 46.5833 139.413 44.95C141.047 43.3167 143.205 42.5 145.888 42.5C148.572 42.5 150.73 43.3167 152.363 44.95C153.997 46.5833 154.813 48.7417 154.813 51.425C154.813 54.1083 153.997 56.2667 152.363 57.9ZM141.838 55.725C142.872 56.8083 144.222 57.35 145.888 57.35C147.555 57.35 148.897 56.8083 149.913 55.725C150.947 54.6417 151.463 53.2083 151.463 51.425C151.463 49.6417 150.947 48.2083 149.913 47.125C148.897 46.0417 147.555 45.5 145.888 45.5C144.222 45.5 142.872 46.0417 141.838 47.125C140.822 48.2083 140.313 49.6417 140.313 51.425C140.313 53.2083 140.822 54.6417 141.838 55.725Z" fill="#0C1620"/><defs><clipPath id="logo-head-clip0"><rect width="58" height="58" fill="white" transform="translate(0 4)"/></clipPath></defs></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="col order-first d-none d-lg-block order-lg-last">
+
+                <ul class="d-lg-flex lg-menu d-none h-100">
+                    <!-- Home -->
+                    <li class="py-2 px-3 mr-2">
+                        <div class="h-100 d-flex align-items-center justify-content-center"><a
+                                class="nota 'font-bold'" href="/">Home</a>
+                        </div>
+                    </li>
+
+
+                    <!-- Menu -->
+                    <li class="py-2 px-3 mr-2">
+                        <div class="h-100 d-flex flex-column align-items-center justify-content-center hover:mega-menu">
+                            <span class="c:cursor-pointer">Menu</span>
+                            <div class="position-relative">
+                                <div class="mega-menu">
+                                    <ul class="mega-menu_parent position-relative shadow-sm">
+                                        <svg class="mega-arrow-parent" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35.5 18"
+                                             style="enable-background:new 0 0 35.5 18;" xml:space="preserve"><path fill="#FFFFFF" d="M0.1,18c6,0,11.3-3.5,13.7-9l4-9.1l4,9.1c0.6,1.3,1.8,4.2,5.2,6.4c3.4,2.2,7.1,2.5,8.5,2.5C23.1,18,0.8,18,0.1,18z"/></svg>
+
+                                        <li class="hover:mega-menu_child">
+                                            <span>Link Title Example</span>
+                                            <span class="parent-arrow-right">
+                                            <svg viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#1b1b1b" d="M9.91663 6.03043L18.0833 14.1971L9.91663 22.3638" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                            <div class="mega-menu-subbox">
+                                                <ul class="mega-menu_child shadow-sm">
+
+                                                    <!-- triangle -->
+                                                    <svg class="mega-arrow_child" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11.7 29.6" style="enable-background:new 0 0 11.7 29.6;" xml:space="preserve">    <path fill="#ffffff" d="M11.8,29.5c0-1.3-0.2-4.5-2.2-7.8c-2-3.3-4.7-4.9-5.9-5.5l-3.6-1.9l4.4-2.3C5.6,11.4,7.9,9.9,9.7,7        c1.8-2.9,2-5.7,2.1-6.9C11.8,9.9,11.8,19.7,11.8,29.5z"/></svg>
+
+                                                    <li class="">
+                                                        <a href="">Link Title Example</a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="">Link Title Example</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <a href="">Link Title Example</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <!-- Articles -->
+                    <li class="py-2 px-3 mr-2">
+                        <div class="h-100 d-flex align-items-center justify-content-center">
+                            <a class="nota" href="articles.html">Articles</a>
+                        </div>
+                    </li>
+                    <!-- Contact Us -->
+                    <li class="py-2 px-3 mr-0">
+                        <div class="h-100 d-flex align-items-center justify-content-center"><a class="nota" href="contact.html">Contact Us</a></div>
+                    </li>
+                </ul>
+
+
+            </div>
+
+
+            <!-- Search -->
+            <div class="col-2 col-lg d-flex align-items-center order-first order-lg-last">
+                <span class=" ml-0 mr-auto mr-md-0 ml-md-auto " id="search-btn"><!-- data-parent="parent" -->
+                    <svg class="search-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect fill="#E7E0F3" x="0.0307617" y="0.390381" width="39.2192" height="39.2192" rx="6"/>
+                        <ellipse stroke="#703FC4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" cx="19.4068" cy="19.7666" rx="8.98856" ry="8.98856"/>
+                        <path    stroke="#703FC4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M25.6584 26.4854L29.1825 30.0002"/>
+                    </svg>
+                </span>
+            </div>
+
+
+        </div>
+    </nav>
+
+</header>
+
+<style>
+    [data-collapse="bait"]{
+        display: none;
+    }
+    .show[data-collapse]{
+        display: block;
+    }
+    [data-collapse="hunt"] svg{
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+    .rotate-90-acw{
+        transform: rotate(-90deg);
+    }
+
+    [data-bait].activated-rightSide{
+        right: 0!important;
+    }
+    [data-bait].activated-fade{
+        opacity: 1!important;
+        visibility: visible!important;
+    }
+</style>
+
+<section class="menu-handy backdrop" data-bait="menuBack" data-kill="menuBack,menu" style="z-index: 999">
+    <aside class="menu-body" data-bait="menu" data-merci>
+
+        <!-- Header -->
+        <div class="d-flex align-items-center justify-content-between mx-0 position-relative px-2" style="height: 70px">
+            <span class="mr-auto">
+                <svg height="33px" viewBox="0 0 172 66" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#logo-head-clip0)"><mask id="logo-head-path-1-inside-1" fill="white"><path d="M35.6521 5.32603C35.6521 9.83379 34.7642 14.2974 33.0391 18.462C31.3141 22.6267 28.7857 26.4107 25.5982 29.5982C22.4107 32.7857 18.6267 35.3141 14.462 37.0391C10.2974 38.7642 5.83378 39.6521 1.32603 39.6521V22.8368C3.62558 22.8368 5.90261 22.3839 8.02711 21.5039C10.1516 20.6239 12.082 19.334 13.708 17.708C15.334 16.082 16.6239 14.1516 17.5039 12.0271C18.3839 9.90261 18.8368 7.62558 18.8368 5.32603H35.6521Z"/></mask><path d="M35.6521 5.32603C35.6521 9.83379 34.7642 14.2974 33.0391 18.462C31.3141 22.6267 28.7857 26.4107 25.5982 29.5982C22.4107 32.7857 18.6267 35.3141 14.462 37.0391C10.2974 38.7642 5.83378 39.6521 1.32603 39.6521V22.8368C3.62558 22.8368 5.90261 22.3839 8.02711 21.5039C10.1516 20.6239 12.082 19.334 13.708 17.708C15.334 16.082 16.6239 14.1516 17.5039 12.0271C18.3839 9.90261 18.8368 7.62558 18.8368 5.32603H35.6521Z" stroke="#703FC4" stroke-width="72" mask="url(#logo-head-path-1-inside-1)"/><rect x="34.8044" y="22.1357" width="19.2113" height="19.2113" fill="#0C1620"/><rect x="16" y="41.3472" width="19.2113" height="19.2113" fill="#0C1620"/></g><path d="M75.17 30.42C72.39 30.42 70.14 29.74 68.42 28.38C66.7 27 65.82 25.18 65.78 22.92H69.59C69.63 24.1 70.16 25.05 71.18 25.77C72.2 26.47 73.53 26.82 75.17 26.82C76.71 26.82 77.95 26.56 78.89 26.04C79.85 25.52 80.33 24.84 80.33 24C80.33 23.44 80.08 22.97 79.58 22.59C79.1 22.19 78.46 21.88 77.66 21.66C76.88 21.44 76.01 21.23 75.05 21.03C74.11 20.83 73.16 20.59 72.2 20.31C71.24 20.03 70.36 19.69 69.56 19.29C68.78 18.89 68.14 18.33 67.64 17.61C67.16 16.89 66.92 16.04 66.92 15.06C66.92 13.24 67.67 11.78 69.17 10.68C70.69 9.56 72.69 9 75.17 9C77.23 9 79.04 9.54 80.6 10.62C82.16 11.7 83.18 13.13 83.66 14.91L79.97 15.84C79.73 14.86 79.17 14.08 78.29 13.5C77.41 12.9 76.37 12.6 75.17 12.6C73.89 12.6 72.86 12.83 72.08 13.29C71.3 13.73 70.91 14.32 70.91 15.06C70.91 15.48 71.15 15.85 71.63 16.17C72.13 16.47 72.77 16.72 73.55 16.92C74.35 17.12 75.22 17.33 76.16 17.55C77.12 17.75 78.08 18.01 79.04 18.33C80 18.65 80.87 19.04 81.65 19.5C82.45 19.94 83.09 20.55 83.57 21.33C84.07 22.09 84.32 22.98 84.32 24C84.32 25.92 83.48 27.47 81.8 28.65C80.12 29.83 77.91 30.42 75.17 30.42ZM86.5447 30V9.42H90.5647V17.64H100.045V9.42H104.065V30H100.045V21.24H90.5647V30H86.5447ZM122.893 30L120.823 24.72H112.483L110.443 30H106.123L114.613 9.42H118.753L127.183 30H122.893ZM113.893 21.12H119.413L116.653 14.04L113.893 21.12ZM128.996 30V9.42H133.406L143.516 24.39V9.42H147.536V30H143.126L133.016 15V30H128.996ZM166.34 30L164.27 24.72H155.93L153.89 30H149.57L158.06 9.42H162.2L170.63 30H166.34ZM157.34 21.12H162.86L160.1 14.04L157.34 21.12Z" fill="#703FC4"/><path d="M73.475 60.35C71.1583 60.35 69.2833 59.7833 67.85 58.65C66.4167 57.5 65.6833 55.9833 65.65 54.1H68.825C68.8583 55.0833 69.3 55.875 70.15 56.475C71 57.0583 72.1083 57.35 73.475 57.35C74.7583 57.35 75.7917 57.1333 76.575 56.7C77.375 56.2667 77.775 55.7 77.775 55C77.775 54.5333 77.5667 54.1417 77.15 53.825C76.75 53.4917 76.2167 53.2333 75.55 53.05C74.9 52.8667 74.175 52.6917 73.375 52.525C72.5917 52.3583 71.8 52.1583 71 51.925C70.2 51.6917 69.4667 51.4083 68.8 51.075C68.15 50.7417 67.6167 50.275 67.2 49.675C66.8 49.075 66.6 48.3667 66.6 47.55C66.6 46.0333 67.225 44.8167 68.475 43.9C69.7417 42.9667 71.4083 42.5 73.475 42.5C75.1917 42.5 76.7 42.95 78 43.85C79.3 44.75 80.15 45.9417 80.55 47.425L77.475 48.2C77.275 47.3833 76.8083 46.7333 76.075 46.25C75.3417 45.75 74.475 45.5 73.475 45.5C72.4083 45.5 71.55 45.6917 70.9 46.075C70.25 46.4417 69.925 46.9333 69.925 47.55C69.925 47.9 70.125 48.2083 70.525 48.475C70.9417 48.725 71.475 48.9333 72.125 49.1C72.7917 49.2667 73.5167 49.4417 74.3 49.625C75.1 49.7917 75.9 50.0083 76.7 50.275C77.5 50.5417 78.225 50.8667 78.875 51.25C79.5417 51.6167 80.075 52.125 80.475 52.775C80.8917 53.4083 81.1 54.15 81.1 55C81.1 56.6 80.4 57.8917 79 58.875C77.6 59.8583 75.7583 60.35 73.475 60.35ZM86.3971 60V45.85H81.4471V42.85H94.6971V45.85H89.7471V60H86.3971ZM104.196 60.3C101.996 60.3 100.221 59.6833 98.8705 58.45C97.5205 57.2 96.8455 55.5667 96.8455 53.55V42.85H100.196V53.55C100.196 54.6833 100.562 55.5917 101.296 56.275C102.029 56.9583 102.996 57.3 104.196 57.3C105.379 57.3 106.329 56.9583 107.046 56.275C107.779 55.5917 108.146 54.6833 108.146 53.55V42.85H111.496V53.55C111.496 55.5667 110.821 57.2 109.471 58.45C108.137 59.6833 106.379 60.3 104.196 60.3ZM114.204 60V42.85H120.879C123.496 42.85 125.604 43.6417 127.204 45.225C128.804 46.7917 129.604 48.8583 129.604 51.425C129.604 53.9917 128.804 56.0667 127.204 57.65C125.604 59.2167 123.496 60 120.879 60H114.204ZM117.554 57H120.879C122.496 57 123.796 56.4917 124.779 55.475C125.762 54.4417 126.254 53.0917 126.254 51.425C126.254 49.7583 125.762 48.4167 124.779 47.4C123.796 46.3667 122.496 45.85 120.879 45.85H117.554V57ZM131.709 60V42.85H135.059V60H131.709ZM152.363 57.9C150.73 59.5333 148.572 60.35 145.888 60.35C143.205 60.35 141.047 59.5333 139.413 57.9C137.78 56.2667 136.963 54.1083 136.963 51.425C136.963 48.7417 137.78 46.5833 139.413 44.95C141.047 43.3167 143.205 42.5 145.888 42.5C148.572 42.5 150.73 43.3167 152.363 44.95C153.997 46.5833 154.813 48.7417 154.813 51.425C154.813 54.1083 153.997 56.2667 152.363 57.9ZM141.838 55.725C142.872 56.8083 144.222 57.35 145.888 57.35C147.555 57.35 148.897 56.8083 149.913 55.725C150.947 54.6417 151.463 53.2083 151.463 51.425C151.463 49.6417 150.947 48.2083 149.913 47.125C148.897 46.0417 147.555 45.5 145.888 45.5C144.222 45.5 142.872 46.0417 141.838 47.125C140.822 48.2083 140.313 49.6417 140.313 51.425C140.313 53.2083 140.822 54.6417 141.838 55.725Z" fill="#0C1620"/><defs><clipPath id="logo-head-clip0"><rect width="58" height="58" fill="white" transform="translate(0 4)"/></clipPath></defs></svg>
+            </span>
+            <span class="pointer" style="" data-kill="menu,menuBack">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#703FC4" opacity="0.4" d="M16.3397 2.82349H7.66969C4.27969 2.82349 1.99969 5.20349 1.99969 8.74349V16.9135C1.99969 20.4435 4.27969 22.8235 7.66969 22.8235H16.3397C19.7297 22.8235 21.9997 20.4435 21.9997 16.9135V8.74349C21.9997 5.20349 19.7297 2.82349 16.3397 2.82349Z"/>
+                    <path fill="#703FC4" d="M15.0154 14.594L13.2364 12.816L15.0144 11.038C15.3564 10.697 15.3564 10.142 15.0144 9.80099C14.6724 9.45699 14.1194 9.45799 13.7774 9.79999L11.9984 11.578L10.2194 9.79799C9.8774 9.45599 9.3234 9.45799 8.9814 9.79799C8.6404 10.14 8.6404 10.695 8.9814 11.036L10.7614 12.816L8.9854 14.591C8.6434 14.933 8.6434 15.488 8.9854 15.828C9.1564 16 9.3794 16.085 9.6034 16.085C9.8284 16.085 10.0514 16 10.2224 15.829L11.9984 14.053L13.7784 15.832C13.9494 16.003 14.1724 16.088 14.3964 16.088C14.6204 16.088 14.8444 16.002 15.0154 15.832C15.3574 15.49 15.3574 14.936 15.0154 14.594Z"/>
+                </svg>
+            </span>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="c:h-calc70 c:scroll-y-auto c:scroll-trans">
+
+            <ul class="menu-list mb-0 w-100 h-100" data-accordion>
+                <li ><a class="nota" href="">Home</a></li>
+
+                <li class="collapse-arrow" data-collapse="off">
+                    <span class="collapsible d-block">Menu</span>
+                </li>
+
+                <ul class="content" data-accordion>
+                    <li class="collapse-arrow" data-collapse>
+                        <span class="collapsible">Link Title Example Acc</span>
+                    </li>
+                    <ul class="content" data-accordion>
+                        <li>
+                            <a href="" class="nota">Link Title Example</a>
+                        </li>
+                        <li>
+                            <span>Title Example</span>
+                        </li>
+                    </ul>
+
+                    <li>
+                        <a href="" class="nota">Link Title Example</a>
+                    </li>
+                    <li>
+                        <span>Title Example</span>
+                    </li>
+                </ul>
+
+
+                <li ><a class="nota" href="">Articles</a></li><!-- route('client.news.index') -->
+                <li ><a class="nota" href="">Contact Us</a></li><!-- route('client.news.index') -->
+            </ul>
+
+        </div>
+
+    </aside>
+</section>
+
+<section class="search-box w-100 p-2 d-block align-items-center" id="search-box" style="display: none; top: -100%; opacity: 0;">
+
+    <div class="container-fluid h-90">
+        <div class="container px-2 h-100 align-items-center d-flex justify-content-center rel z-on3">
+            <!--search svg-->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.7669" cy="11.7666" r="8.98856" stroke="rgb(var(---rgb-primary-500))" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path opacity="0.4" d="M18.0186 18.4851L21.5426 22" stroke="rgb(var(---rgb-primary-500))" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <!--<div class="vertical-divider bg-var-primary"></div>-->
+            <input type="text" class="search-input" placeholder="Search here...">
+            <!--close svg-->
+            <!--<svg width="30" height="30" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" id="close-search-box">
+                <path fill="rgb(var(&#45;&#45;color-primary-500))" fill-rule="evenodd" clip-rule="evenodd" d="M5.46967 5.46967C5.76256 5.17678 6.23744 5.17678 6.53033 5.46967L9 7.93935L11.4697 5.46967C11.7625 5.17678 12.2374 5.17678 12.5303 5.46967C12.8232 5.76256 12.8232 6.23744 12.5303 6.53033L10.0606 9L12.5303 11.4697C12.8232 11.7625 12.8232 12.2374 12.5303 12.5303C12.2374 12.8232 11.7625 12.8232 11.4697 12.5303L9 10.0606L6.53033 12.5303C6.23744 12.8232 5.76256 12.8232 5.46967 12.5303C5.17678 12.2374 5.17678 11.7625 5.46967 11.4697L7.93935 9L5.46967 6.53033C5.17678 6.23744 5.17678 5.76256 5.46967 5.46967Z"/>
+            </svg>-->
+            <svg id="close-search-box" fill="var(--color-primary-500)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 128 128" width="30" height="30">    <path d="M 64 6 C 48.5 6 33.9 12 23 23 C 12 33.9 6 48.5 6 64 C 6 79.5 12 94.1 23 105 C 34 116 48.5 122 64 122 C 79.5 122 94.1 116 105 105 C 116 94 122 79.5 122 64 C 122 48.5 116 33.9 105 23 C 94.1 12 79.5 6 64 6 z M 64 12 C 77.9 12 90.900781 17.399219 100.80078 27.199219 C 110.70078 36.999219 116 50.1 116 64 C 116 77.9 110.60078 90.900781 100.80078 100.80078 C 90.900781 110.60078 77.9 116 64 116 C 50.1 116 37.099219 110.60078 27.199219 100.80078 C 17.299219 91.000781 12 77.9 12 64 C 12 50.1 17.399219 37.099219 27.199219 27.199219 C 36.999219 17.299219 50.1 12 64 12 z M 50.5625 47.5 C 49.8 47.5 49.05 47.800391 48.5 48.400391 C 47.3 49.600391 47.3 51.499609 48.5 52.599609 L 59.800781 64 L 48.400391 75.300781 C 47.200391 76.500781 47.200391 78.4 48.400391 79.5 C 49.000391 80.1 49.8 80.400391 50.5 80.400391 C 51.2 80.400391 51.999609 80.1 52.599609 79.5 L 64 68.199219 L 75.300781 79.5 C 75.900781 80.1 76.700391 80.400391 77.400391 80.400391 C 78.100391 80.400391 78.9 80.1 79.5 79.5 C 80.7 78.3 80.7 76.400781 79.5 75.300781 L 68.199219 64 L 79.5 52.699219 C 80.7 51.499219 80.699609 49.600391 79.599609 48.400391 C 78.399609 47.200391 76.500391 47.200391 75.400391 48.400391 L 64 59.800781 L 52.699219 48.400391 C 52.099219 47.800391 51.325 47.5 50.5625 47.5 z"/></svg>
+        </div>
+    </div>
+
+    <div class="search-result mx-auto overflow-auto px-2 flex flex-column" style="display: none!important;">
+        <span class="spinner-border text-dark "></span>
+    </div>
+
+    <div class="search-shadow"></div>
+
+</section>
+
+<!-- END HEADER -->
+
+
+
+
+<!--Main Content Start-->
+<main>
+
+
+    <!-- Head Section Start -->
+    <section class="container-fluid  d-flex align-items-center" id="index-section-head" style="background-image: url('client/img/statics/backgrounds/back-light-rtl.svg');">
+        <div class="w-100 h-100 d-flex justify-content-center">
+            <div class="container my-auto">
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+
+                        <img class="image mx-auto" src='client/img/statics/ellipse-head.png' alt="At SHANA Studio We Strive To Grow your Business">
+
+                        <div class="content-box text-center">
+                            <h1 class="title">
+                                Shana Studio Presents
+                            </h1>
+                            <div class="desc-md mt-3 d-none d-md-block">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 text-center mt-3">
+                        <div class="desc text-justify c:text-lastline-center d-md-none">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex laborum minus quidem recusandae sint tenetur voluptatibus. Amet at, deleniti dolorem eum fuga nam obcaecati odit praesentium vero! Error exercitationem, quam.
+                        </div>
+                        <div class="mt-4">
+                            <a href="" class="shana:btn shana:btn-primary">See More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Head Section End -->
+
+
+    <!-- Section 1 Start - Prog -->
+    <section class="container-fluid index-sec-1 py-0 py-md-5"
+             style="background-image: url('client/img/statics/backgrounds/back-round.svg')">
+        <div class="container pb-5">
+            <div class="row">
+
+                <div class="col-12 col-md order-first order-md-last">
+                    <img class="img img-fluid w-100" src="client/img/index/sec-1.png" alt="">
+                </div>
+
+                <div class="col-12 col-md order-last order-md-first">
+                    <div class="d-flex w-100 h-100 align-items-center justify-content-center">
+                        <div>
+                            <h2 class="shana:title shana:title:before">Programming & Web Design Department</h2>
+
+                            <p class="shana:desc mt-3">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequuntur mollitia natus, quos ratione similique veritatis? Amet, autem dolores earum ex illum nam, necessitatibus nisi nobis quasi quisquam saepe vitae.
+                            </p>
+
+                            <div class="mt-3">
+                                <a href="" class="shana:btn shana:btn-primary">See More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 1 End -->
+
+
+    <!-- Section 2 Start - Multi -->
+    <section class="container-fluid py-0 py-md-5">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-12 col-md order-last order-md-first">
+                    <div class="d-flex w-100 h-100 align-items-center justify-content-center">
+                        <div>
+                            <h2 class="shana:title shana:title:before">Multimedia Department</h2>
+                            <p class="shana:desc mt-3">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet in laborum natus nihil, obcaecati optio quae quibusdam saepe voluptas! A aperiam et minus nam quasi, recusandae repudiandae similique tempora.
+                            </p>
+                            <div class="mt-3">
+                                <a href="" class="shana:btn shana:btn-primary">See More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 2 End -->
+
+    <!-- Video Swiper - Section 3 Start -->
+    <section class="my-3 swiper-marquee-box position-relative">
+        <div class="swiper-container swiper-marquee top-col pb-3 notToBe" style="position: absolute!important;visibility: hidden;opacity: 0">
+            <div class="swiper-wrapper pad-verti10">
+                <!--foreach sample start-->
+
+                <div class="swiper-slide">
+                    <div class="marquee-box  swiper-lazy">
+                        <video preload="none" poster="client/img/videos/test-1.png" src="client/videos/test-1.mp4" controls></video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="marquee-box  swiper-lazy">
+                        <video preload="none" poster="client/img/videos/test-3.png" src="client/videos/test-1.mp4" controls></video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="marquee-box  swiper-lazy">
+                        <video preload="none" poster="client/img/videos/test-5.png" src="client/videos/test-1.mp4" controls></video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="marquee-box  swiper-lazy">
+                        <video preload="none" poster="client/img/videos/test-2.png" src="client/videos/test-1.mp4" controls></video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="marquee-box  swiper-lazy">
+                        <video preload="none" poster="client/img/videos/test-4.png" src="client/videos/test-1.mp4" controls></video>
+                    </div>
+                </div>
+
+                <!--foreach sample end-->
+            </div>
+        </div>
+
+        <div class="swiper-container swiper-marquee bot-col pb-3 notToBe" style="position: absolute!important;visibility: hidden;opacity: 0">
+            <div class="swiper-wrapper pad-verti10">
+                <!--foreach sample start-->
+
+                <div class="swiper-slide">
+                    <div class="marquee-box  swiper-lazy">
+                        <video preload="none" poster="client/img/videos/test-2.png" src="client/videos/test-1.mp4" controls></video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="marquee-box  swiper-lazy">
+                        <video preload="none" poster="client/img/videos/test-4.png" src="client/videos/test-1.mp4" controls></video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="marquee-box  swiper-lazy">
+                        <video preload="none" poster="client/img/videos/test-1.png" src="client/videos/test-1.mp4" controls></video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="marquee-box  swiper-lazy">
+                        <video preload="none" poster="client/img/videos/test-3.png" src="client/videos/test-1.mp4" controls></video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="marquee-box  swiper-lazy">
+                        <video preload="none" poster="client/img/videos/test-5.png" src="client/videos/test-1.mp4" controls></video>
+                    </div>
+                </div>
+
+                <!--foreach sample end-->
+            </div>
+        </div>
+    </section>
+    <!-- Video Swiper - Section 3 End -->
+
+    <!-- Section 3 Start - Game -->
+    <section class="container-fluid index-sec-4 px-0 px-md-3 py-0 py-md-5"
+             style="background-image: url('client/img/statics/backgrounds/back-round.svg')">
+        <div class="container pb-5">
+            <div class="row">
+                <!--                    <div class="col-12 order-last">-->
+                <!--                        <img class="img img-fluid w-100" src="{{ asset('client/img/statics/fortnite.png') }}" alt="">-->
+                <!--                    </div>-->
+                <div class="col-12 order-first">
+                    <div class="d-flex w-100 h-100 align-items-center justify-content-center">
+                        <div>
+                            <h2 class="shana:title shana:title:before">Gaming Department</h2>
+                            <p class="shana:desc mt-3">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam dolor dolorum eaque excepturi, facere facilis fuga fugiat illo, ipsa libero maxime nobis non nostrum officiis optio, perspiciatis praesentium sequi.
+                            </p>
+                            <div class="mt-3">
+                                <a href="" class="shana:btn shana:btn-primary">See More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overflow-hidden d-flex align-items-center justify-content-center">
+            <img class="img img-overflow" src="client/img/index/sec-3.png" alt="">
+        </div>
+
+    </section>
+    <!-- Section 3 End -->
+
+
+
+    <!-- Cols - Section 5 Start -->
+    <section class="container-fluid mt-5 index-sec-5">
+        <div class="container">
+
+            <h2 class="shana:title shana:title:before">Lorem ipsum dolor sit amet</h2>
+
+            <!-- Col 1 , 2 -->
+            <div class="col-box-row row mt-3">
+
+                <div class="col-12 col-md-5  mt-3">
+                    <div class="col-box">
+                        <div class="d-flex align-items-center">
+
+                            <img class="col-icon" src="client/img/index/col-1.png" alt="icon">
+
+                            <h3 class="title">Lorem ipsum dolor sit amet</h3>
+                        </div>
+                        <div class="desc text-justify mt-3">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consectetur dicta eius, esse fugiat molestias mollitia nisi nostrum, nulla omnis optio, praesentium quas quis quod rerum sed similique vel veritatis.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md mt-3">
+                    <div class="col-box">
+                        <div class="d-flex align-items-center">
+
+                            <img class="col-icon" src="client/img/index/col-2.png" alt="icon">
+
+                            <h3 class="title">Lorem ipsum dolor sit amet</h3>
+                        </div>
+                        <div class="desc text-justify mt-3">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam, beatae blanditiis cum debitis eaque fuga labore magnam maxime quaerat repellat sed similique voluptas! A aliquam est nemo repellendus ut.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Col 3 , 4 -->
+            <div class="col-box-row row">
+
+                <div class="col-12 col-md-7 mt-3">
+                    <div class="col-box">
+                        <div class="d-flex align-items-center">
+
+                            <img class="col-icon" src="client/img/index/col-3.png" alt="icon">
+
+                            <h3 class="title">Lorem ipsum dolor sit amet</h3>
+                        </div>
+                        <div class="desc text-justify mt-3">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur culpa dolore enim eos facilis in ipsa iure labore laboriosam libero, maxime modi mollitia nihil nobis nostrum quod tempore voluptates!
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md mt-3">
+                    <div class="col-box">
+                        <div class="d-flex align-items-center">
+
+                            <img class="col-icon" src="client/img/index/col-4.png" alt="icon">
+
+                            <h3 class="title">Lorem ipsum dolor sit amet</h3>
+                        </div>
+                        <div class="desc text-justify mt-3">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet atque autem commodi consequuntur, dignissimos est exercitationem fugiat fugit, illum labore minus nisi provident qui reiciendis repudiandae totam veniam voluptatum!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Cols - Section 5 End -->
+
+
+
+    <!-- Artciles Swiper Start -->
+    <section class="container-fluid mt-5 pt-3 pt-md-5">
+        <div class="container">
+            <h2 class="shana:title shana:title:before">Latest Published Articles</h2>
+        </div>
+    </section>
+    <section class="container-fluid px-0 p-md-3 mt-4 mt-md-2">
+        <div class="container px-0 p-md-3 position-relative">
+            <div class="swiper-container swiper-article pb-3 mt-3 overflow-hidden" style="position: unset!important;">
+                <div class="swiper-wrapper">
+                    <!--foreach sample start-->
+                    <a href="" class="swiper-slide h-auto swiperCenter nota">
+                        <article class="shana:card d-flex flex-column overflow-hidden">
+                            <figure class="rel">
+                                <img class="img img-fluid w-100 swiper-lazy"
+                                     src="client/img/statics/placeholder-wide.png"
+                                     data-lazy
+                                     data-src="client/img/news/test-1.png"
+                                     alt=""
+                                />
+                            </figure>
+
+                            <div class="shana:card-body d-flex flex-column isa p-2 swiper-lazy">
+                                <h6 class="shana:card-title c:limitText-2 mb-0 f14">Lorem ipsum dolor sit amet</h6>
+                            </div>
+
+                            <div class="shana:card-footer d-flex align-items-center swiper-lazy">
+                                <span class="shana:card-date align-items-center d-flex f14-mxmd">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#C0C0C0" d="M2.57715 8.16427H17.4304" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.7017 11.4189H13.7094" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M10.004 11.4189H10.0117"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.29816 11.4189H6.30588" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.7017 14.6577H13.7094" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M10.004 14.6577H10.0117"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.29816 14.6577H6.30588" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.3699 1.99414V4.73646" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.63795 1.99414V4.73646" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" d="M13.5319 3.31006H6.4758C4.02856 3.31006 2.5 4.67334 2.5 7.17925V14.7206C2.5 17.2659 4.02856 18.6607 6.4758 18.6607H13.5242C15.9791 18.6607 17.5 17.2896 17.5 14.7837V7.17925C17.5077 4.67334 15.9868 3.31006 13.5319 3.31006Z"/></svg>
+                                    <small class="date ml-1">1 Minute ago</small>
+                                </span>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="" class="swiper-slide h-auto swiperCenter nota">
+                        <article class="shana:card d-flex flex-column overflow-hidden">
+                            <figure class="rel">
+                                <img class="img img-fluid w-100 swiper-lazy"
+                                     src="client/img/statics/placeholder-wide.png"
+                                     data-lazy
+                                     data-src="client/img/news/test-2.png"
+                                     alt=""
+                                />
+                            </figure>
+
+                            <div class="shana:card-body d-flex flex-column isa p-2 swiper-lazy">
+                                <h6 class="shana:card-title c:limitText-2 mb-0 f14">Lorem ipsum dolor sit amet</h6>
+                            </div>
+
+                            <div class="shana:card-footer d-flex align-items-center swiper-lazy">
+                                <span class="shana:card-date align-items-center d-flex f14-mxmd">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#C0C0C0" d="M2.57715 8.16427H17.4304" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.7017 11.4189H13.7094" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M10.004 11.4189H10.0117"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.29816 11.4189H6.30588" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.7017 14.6577H13.7094" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M10.004 14.6577H10.0117"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.29816 14.6577H6.30588" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.3699 1.99414V4.73646" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.63795 1.99414V4.73646" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" d="M13.5319 3.31006H6.4758C4.02856 3.31006 2.5 4.67334 2.5 7.17925V14.7206C2.5 17.2659 4.02856 18.6607 6.4758 18.6607H13.5242C15.9791 18.6607 17.5 17.2896 17.5 14.7837V7.17925C17.5077 4.67334 15.9868 3.31006 13.5319 3.31006Z"/></svg>
+                                    <small class="date ml-1">1 Minute ago</small>
+                                </span>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="" class="swiper-slide h-auto swiperCenter nota">
+                        <article class="shana:card d-flex flex-column overflow-hidden">
+                            <figure class="rel">
+                                <img class="img img-fluid w-100 swiper-lazy"
+                                     src="client/img/statics/placeholder-wide.png"
+                                     data-lazy
+                                     data-src="client/img/news/test-3.png"
+                                     alt=""
+                                />
+                            </figure>
+
+                            <div class="shana:card-body d-flex flex-column isa p-2 swiper-lazy">
+                                <h6 class="shana:card-title c:limitText-2 mb-0 f14">Lorem ipsum dolor sit amet</h6>
+                            </div>
+
+                            <div class="shana:card-footer d-flex align-items-center swiper-lazy">
+                                <span class="shana:card-date align-items-center d-flex f14-mxmd">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#C0C0C0" d="M2.57715 8.16427H17.4304" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.7017 11.4189H13.7094" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M10.004 11.4189H10.0117"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.29816 11.4189H6.30588" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.7017 14.6577H13.7094" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M10.004 14.6577H10.0117"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.29816 14.6577H6.30588" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.3699 1.99414V4.73646" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.63795 1.99414V4.73646" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" d="M13.5319 3.31006H6.4758C4.02856 3.31006 2.5 4.67334 2.5 7.17925V14.7206C2.5 17.2659 4.02856 18.6607 6.4758 18.6607H13.5242C15.9791 18.6607 17.5 17.2896 17.5 14.7837V7.17925C17.5077 4.67334 15.9868 3.31006 13.5319 3.31006Z"/></svg>
+                                    <small class="date ml-1">1 Minute ago</small>
+                                </span>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="" class="swiper-slide h-auto swiperCenter nota">
+                        <article class="shana:card d-flex flex-column overflow-hidden">
+                            <figure class="rel">
+                                <img class="img img-fluid w-100 swiper-lazy"
+                                     src="client/img/statics/placeholder-wide.png"
+                                     data-lazy
+                                     data-src="client/img/news/test-2.png"
+                                     alt=""
+                                />
+                            </figure>
+
+                            <div class="shana:card-body d-flex flex-column isa p-2 swiper-lazy">
+                                <h6 class="shana:card-title c:limitText-2 mb-0 f14">Lorem ipsum dolor sit amet</h6>
+                            </div>
+
+                            <div class="shana:card-footer d-flex align-items-center swiper-lazy">
+                                <span class="shana:card-date align-items-center d-flex f14-mxmd">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#C0C0C0" d="M2.57715 8.16427H17.4304" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.7017 11.4189H13.7094" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M10.004 11.4189H10.0117"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.29816 11.4189H6.30588" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.7017 14.6577H13.7094" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M10.004 14.6577H10.0117"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.29816 14.6577H6.30588" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.3699 1.99414V4.73646" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.63795 1.99414V4.73646" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" d="M13.5319 3.31006H6.4758C4.02856 3.31006 2.5 4.67334 2.5 7.17925V14.7206C2.5 17.2659 4.02856 18.6607 6.4758 18.6607H13.5242C15.9791 18.6607 17.5 17.2896 17.5 14.7837V7.17925C17.5077 4.67334 15.9868 3.31006 13.5319 3.31006Z"/></svg>
+                                    <small class="date ml-1">1 Minute ago</small>
+                                </span>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="" class="swiper-slide h-auto swiperCenter nota">
+                        <article class="shana:card d-flex flex-column overflow-hidden">
+                            <figure class="rel">
+                                <img class="img img-fluid w-100 swiper-lazy"
+                                     src="client/img/statics/placeholder-wide.png"
+                                     data-lazy
+                                     data-src="client/img/news/test-2.png"
+                                     alt=""
+                                />
+                            </figure>
+
+                            <div class="shana:card-body d-flex flex-column isa p-2 swiper-lazy">
+                                <h6 class="shana:card-title c:limitText-2 mb-0 f14">Lorem ipsum dolor sit amet</h6>
+                            </div>
+
+                            <div class="shana:card-footer d-flex align-items-center swiper-lazy">
+                                <span class="shana:card-date align-items-center d-flex f14-mxmd">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#C0C0C0" d="M2.57715 8.16427H17.4304" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.7017 11.4189H13.7094" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M10.004 11.4189H10.0117"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.29816 11.4189H6.30588" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.7017 14.6577H13.7094" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M10.004 14.6577H10.0117"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.29816 14.6577H6.30588" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M13.3699 1.99414V4.73646" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" d="M6.63795 1.99414V4.73646" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" d="M13.5319 3.31006H6.4758C4.02856 3.31006 2.5 4.67334 2.5 7.17925V14.7206C2.5 17.2659 4.02856 18.6607 6.4758 18.6607H13.5242C15.9791 18.6607 17.5 17.2896 17.5 14.7837V7.17925C17.5077 4.67334 15.9868 3.31006 13.5319 3.31006Z"/></svg>
+                                    <small class="date ml-1">1 Minute ago</small>
+                                </span>
+                            </div>
+                        </article>
+                    </a>
+                    <!--foreach sample end-->
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev shana:arrow-prev d-none d-md-inline-block">
+                    <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#200E32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M18.0833 22.3636L9.91658 14.1969L18.0833 6.03027"/></svg>
+                </div>
+                <div class="swiper-button-next shana:arrow-next d-none d-md-inline-block">
+                    <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#200E32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M9.91663 6.03043L18.0833 14.1971L9.91663 22.3638"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Artciles Swiper End -->
+
+
+</main>
+<!--Main Content END-->
+<!-- END MAIN -->
+
+
+
+<section class="d-flex w-100 overflow-hidden justify-content-center rel  mt-2 mt-md-5" style="position: relative;transform: rotateY(180deg);z-index: 0;margin-bottom: -1px;">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-lg-100 w-100 h-100"
+         viewBox="0 0 1920 65.1" xml:space="preserve">
+<!--            <path fill="#0D7BEA" d="M0,13c674.5-52.5,1385,82,1920,0v52.1H0V13z"/>-->
+        <path fill="var(--color-primary-500 , #713fc4)" d="M1920,12.6C1245.5-40,535,94.6,0,12.6v52.5h1920V12.6z"/>
+        </svg>
+</section>
+
+<footer class="container-fluid rel mx-0 f-color-0 bg-var-primary-500 pb-4 pb-lg-2">
+    <section class="pt-5 position-relative">
+        <div class="row justify-content-center pb-4">
+            <div class="col-12 py-4">
+
+                <div class="container mb-5">
+                    <div class="row row-cols-1 footer-subscribe-box justify-content-center">
+                        <div class="col-12 col-sm-10 col-lg-6 text-center">
+                            <span class="subscribe-title">
+                                Want us to email you occasionally with Shana Studio news?
+                            </span>
+                        </div>
+                        <div class="col mt-3">
+                            <div>
+                                <form method="post" class="shana:form-pill">
+                                    <div class="shana:form-group">
+                                        <input type="email" placeholder="Enter your email address" autocomplete="off">
+                                        <button type="submit" id="footer-subscribe-btn">
+                                            <span>Send</span>
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="text-center">
+                                    <small class="from-error text-warning">Warning Example</small>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="container">
+                    <div class="row footer-links-cols row-cols-1 row-cols-sm-2 row-cols-lg-4">
+                        <div class="col mt-4">
+                            <span class="footer-title d-block text-center text-lg-left">Column Title 1</span>
+
+                            <ul class="footer-links">
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col mt-4">
+                            <span class="footer-title d-block text-center text-lg-left">Column Title 2</span>
+                            <ul class="footer-links">
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                            </ul>
+                        </div>
+                        <div class="col mt-4">
+
+                            <span class="footer-title d-block text-center text-lg-left">Column Title3</span>
+
+                            <ul class="footer-links">
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                                <li><a href="" class="nota">Link Title Example</a></li>
+                            </ul>
+                        </div>
+                        <div class="col mt-4">
+                            <span class="footer-title d-block text-center text-lg-left">Contact Us</span>
+                            <ul class="footer-links">
+                                <li>
+                                    <svg class="mr-2" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" d="M2.61666 4.41484C2.89344 3.95655 4.41843 2.28966 5.50669 2.33998C5.83199 2.36694 6.11956 2.56373 6.3532 2.79198C6.88969 3.31586 8.42546 5.29725 8.51263 5.7142C8.72471 6.7368 7.50616 7.32628 7.87909 8.35697C8.82985 10.6834 10.4681 12.3216 12.7955 13.2714C13.8254 13.6443 14.4149 12.4258 15.4375 12.6388C15.8536 12.7259 17.836 14.2616 18.3599 14.7981C18.5873 15.0308 18.785 15.3193 18.8119 15.6446C18.8524 16.7903 17.0821 18.3367 16.737 18.5344C15.9228 19.1167 14.8606 19.1068 13.5657 18.5048C9.95225 17.0014 4.1776 11.3358 2.64632 7.58597C2.0604 6.29829 2.01997 5.22896 2.61666 4.41484Z"/></svg>
+                                    <a href="tel:" class="nota">+989127778888</a>
+                                </li>
+                                <li>
+                                    <svg class="mr-2" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15.1094 8.08008L11.3771 11.0851C10.6708 11.6388 9.6807 11.6388 8.97439 11.0851L5.21008 8.08008"/><path stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" d="M6.02701 3.21387H14.2764C15.4659 3.22721 16.598 3.73005 17.4091 4.60529C18.2202 5.48053 18.6395 6.65177 18.5693 7.84622V13.5581C18.6395 14.7526 18.2202 15.9238 17.4091 16.799C16.598 17.6743 15.4659 18.1771 14.2764 18.1905H6.02701C3.47209 18.1905 1.75012 16.1119 1.75012 13.5581V7.84622C1.75012 5.29238 3.47209 3.21387 6.02701 3.21387Z"/></svg>
+                                    <a href="mailto:" class="nota">ex@iamami.ir</a>
+                                </li>
+                                <li>
+                                    <svg class="mr-2" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" d="M3.70935 9.24354C3.72196 5.53303 6.74014 2.53528 10.4507 2.54789C14.1612 2.5605 17.1589 5.57868 17.1463 9.28919V9.36528C17.1007 11.7772 15.7539 14.0066 14.1028 15.749C13.1586 16.7295 12.1041 17.5976 10.9604 18.3359C10.6546 18.6005 10.201 18.6005 9.89522 18.3359C8.19028 17.2262 6.69392 15.8251 5.47457 14.1968C4.38778 12.7769 3.77075 11.0534 3.70935 9.26637L3.70935 9.24354Z"/><ellipse stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" cx="10.4278" cy="9.37299" rx="2.15326" ry="2.15326"/></svg>
+                                    <a class="nota">Tehran , Iran</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Border-->
+                <div class="row border-top footer-border-top mt-5 mb-3"></div>
+
+                <!-- Socilas -->
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 order-first order-sm-last">
+                            <ul class="py-2">
+                                <li class="d-flex align-items-center justify-content-around">
+                                    <!--whatsapp-->
+                                    <a class="c:op-7 c:hover:op-10" target="_blank" href="whatsapp://send?text=Hey Shana! Question: &phone="
+                                       title="Whatsapp">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#wats-clip)">
+                                                <path d="M8.93239 0H8.928C4.08737 0 0.151001 3.93747 0.151001 8.7792C0.151001 10.6996 0.769934 12.4796 1.82234 13.9249L0.728233 17.1864L4.10274 16.1076C5.49095 17.0273 7.14692 17.5584 8.93239 17.5584C13.773 17.5584 17.7094 13.6198 17.7094 8.7792C17.7094 3.93857 13.773 0 8.93239 0ZM14.0408 12.3973C13.829 12.9954 12.9884 13.4914 12.3179 13.6363C11.8592 13.734 11.26 13.8119 9.24296 12.9757C6.66297 11.9068 5.00151 9.2851 4.87201 9.115C4.74801 8.9449 3.82948 7.72679 3.82948 6.46698C3.82948 5.20716 4.46927 4.59371 4.72716 4.33034C4.93896 4.11415 5.28903 4.01539 5.62483 4.01539C5.73347 4.01539 5.83114 4.02087 5.91893 4.02526C6.17682 4.03624 6.30632 4.0516 6.47641 4.45873C6.68821 4.96903 7.20399 6.22884 7.26544 6.35833C7.32799 6.48783 7.39055 6.66341 7.30275 6.83351C7.22045 7.00909 7.14802 7.08701 7.01853 7.23625C6.88903 7.3855 6.76613 7.49963 6.63663 7.65985C6.51811 7.79922 6.38423 7.94847 6.53348 8.20635C6.68272 8.45876 7.1985 9.30046 7.9579 9.97646C8.93788 10.8489 9.7324 11.1276 10.0166 11.2462C10.2284 11.3339 10.4808 11.3131 10.6356 11.1485C10.832 10.9367 11.0745 10.5855 11.3214 10.2398C11.497 9.99182 11.7187 9.9611 11.9513 10.0489C12.1884 10.1312 13.4427 10.7512 13.7006 10.8796C13.9585 11.0091 14.1286 11.0706 14.1911 11.1792C14.2526 11.2879 14.2526 11.7981 14.0408 12.3973Z"
+                                                      fill="white"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="wats-clip">
+                                                    <rect width="17.5584" height="17.5584" fill="white"
+                                                          transform="translate(0.151001)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+
+
+                                    <!--instagram-->
+
+                                    <a class="c:op-7 c:hover:op-10" target="_blank" href="" title="Instagram">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#insta-clip)">
+                                                <path d="M12.5778 0.170654H5.77393C2.64301 0.170654 0.104034 2.70963 0.104034 5.84055V12.6444C0.104034 15.7753 2.64301 18.3143 5.77393 18.3143H12.5778C15.7087 18.3143 18.2477 15.7753 18.2477 12.6444V5.84055C18.2477 2.70963 15.7087 0.170654 12.5778 0.170654ZM16.5467 12.6444C16.5467 14.833 14.7664 16.6134 12.5778 16.6134H5.77393C3.58535 16.6134 1.805 14.833 1.805 12.6444V5.84055C1.805 3.65197 3.58535 1.87162 5.77393 1.87162H12.5778C14.7664 1.87162 16.5467 3.65197 16.5467 5.84055V12.6444Z"
+                                                      fill="white"/>
+                                                <path d="M9.17587 4.70654C6.67091 4.70654 4.63995 6.7375 4.63995 9.24246C4.63995 11.7474 6.67091 13.7784 9.17587 13.7784C11.6808 13.7784 13.7118 11.7474 13.7118 9.24246C13.7118 6.7375 11.6808 4.70654 9.17587 4.70654ZM9.17587 12.0774C7.61325 12.0774 6.34092 10.8051 6.34092 9.24246C6.34092 7.6787 7.61325 6.40751 9.17587 6.40751C10.7385 6.40751 12.0108 7.6787 12.0108 9.24246C12.0108 10.8051 10.7385 12.0774 9.17587 12.0774Z"
+                                                      fill="white"/>
+                                                <path d="M14.052 4.97078C14.3859 4.97078 14.6565 4.70018 14.6565 4.36637C14.6565 4.03257 14.3859 3.76196 14.052 3.76196C13.7182 3.76196 13.4476 4.03257 13.4476 4.36637C13.4476 4.70018 13.7182 4.97078 14.052 4.97078Z"
+                                                      fill="white"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="insta-clip">
+                                                    <rect width="18" height="18" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+
+                                    <!--Telegram-->
+
+                                    <a class="c:op-7 c:hover:op-10" target="_blank" href="" title="Telegram">
+                                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#tele-clip)">
+                                                <path
+                                                        d="M7.82065 11.8467L7.51085 16.2043C7.9541 16.2043 8.14607 16.0139 8.37628 15.7853L10.4544 13.7992L14.7605 16.9527C15.5502 17.3928 16.1067 17.1611 16.3197 16.2262L19.1462 2.98168L19.147 2.9809C19.3975 1.81346 18.7248 1.35694 17.9554 1.64334L1.34122 8.00416C0.207333 8.44429 0.224501 9.07639 1.14846 9.36279L5.39603 10.684L15.2623 4.51043C15.7266 4.20296 16.1488 4.37308 15.8015 4.68055L7.82065 11.8467Z"
+                                                        fill="white"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="tele-clip">
+                                                    <rect width="18.729" height="18.729" fill="white"
+                                                          transform="translate(0.5)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+
+                                    <!--Aparat-->
+
+                                    <a class="c:op-7 c:hover:op-10" target="_blank" href="" title="Youtube">
+                                        <svg width="20" height="19" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip-yout0)"><path fill="#ffffff" d="M19.6604 6.1591C19.6604 6.1591 19.4762 4.8592 18.9092 4.28842C18.1911 3.53721 17.3883 3.53353 17.0201 3.48934C14.3834 3.29785 10.4248 3.29785 10.4248 3.29785H10.4175C10.4175 3.29785 6.45886 3.29785 3.82225 3.48934C3.454 3.53353 2.65123 3.53721 1.93316 4.28842C1.36607 4.8592 1.18563 6.1591 1.18563 6.1591C1.18563 6.1591 0.994141 7.68731 0.994141 9.21183V10.6406C0.994141 12.1651 1.18194 13.6933 1.18194 13.6933C1.18194 13.6933 1.36607 14.9932 1.92948 15.564C2.64755 16.3152 3.59025 16.2895 4.01005 16.3705C5.51984 16.5141 10.4212 16.5583 10.4212 16.5583C10.4212 16.5583 14.3834 16.5509 17.0201 16.3631C17.3883 16.3189 18.1911 16.3152 18.9092 15.564C19.4762 14.9932 19.6604 13.6933 19.6604 13.6933C19.6604 13.6933 19.8482 12.1688 19.8482 10.6406V9.21183C19.8482 7.68731 19.6604 6.1591 19.6604 6.1591ZM8.47315 12.375V7.07602L13.5659 9.73474L8.47315 12.375Z"/></g><defs><clipPath id="clip-yout0"><rect width="18.854" height="18.854"  transform="translate(0.994141 0.50293)"/></clipPath></defs></svg>
+                                    </a>
+
+                                    <!--Twitter-->
+
+                                    <a class="c:op-7 c:hover:op-10" target="_blank" href="" title="Twitter">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#twit-clip)">
+                                                <path
+                                                        d="M19.9465 3.66858C19.2283 3.98364 18.4629 4.19248 17.665 4.29388C18.4859 3.80378 19.1124 3.03362 19.4069 2.10533C18.6416 2.56163 17.7966 2.88394 16.8961 3.0638C16.1694 2.29003 15.1336 1.81079 14.0037 1.81079C11.8116 1.81079 10.0467 3.59012 10.0467 5.77142C10.0467 6.08527 10.0733 6.38706 10.1385 6.67436C6.84662 6.51381 3.93379 4.93608 1.97702 2.53266C1.6354 3.12537 1.43501 3.80378 1.43501 4.5341C1.43501 5.90541 2.14119 7.121 3.19381 7.82476C2.55765 7.81269 1.93356 7.628 1.40483 7.33708C1.40483 7.34915 1.40483 7.36484 1.40483 7.38053C1.40483 9.30471 2.77735 10.903 4.5772 11.2711C4.25489 11.3593 3.90361 11.4015 3.53906 11.4015C3.28556 11.4015 3.02964 11.387 2.78942 11.3339C3.30246 12.902 4.75827 14.0548 6.48931 14.0922C5.14214 15.1461 3.43162 15.781 1.57987 15.781C1.25515 15.781 0.943705 15.7665 0.632263 15.7267C2.38624 16.8578 4.46493 17.5036 6.70659 17.5036C13.9929 17.5036 17.9764 11.4679 17.9764 6.23617C17.9764 6.06113 17.9704 5.89213 17.962 5.72434C18.7478 5.16664 19.4081 4.47012 19.9465 3.66858Z"
+                                                        fill="white"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="twit-clip">
+                                                    <rect width="19.3142" height="19.3142" fill="white"
+                                                          transform="translate(0.632263)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+
+                                    <!--Facebook-->
+
+                                    <a class="c:op-7 c:hover:op-10" target="_blank" href="" title="Facebook">
+                                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                             viewBox="0 0 15 15">
+                                            <path fill="#FFFFFF"
+                                                  d="M6.1,13.1h2.3V7.4h1.6l0.2-1.9H8.4V4.5c0-0.4,0.1-0.6,0.5-0.6h1.2v-2H8.5C6.8,1.8,6.1,2.6,6.1,4v1.5H4.9v1.9 h1.2V13.1z"/>
+                                        </svg>
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+
+
+<!-- END FOOTER -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script defer src="libs/js/sweetalert2@11.js"></script>
+
+
+
+<script type="text/javascript">
+    let src;
+    let jsOnLoad = (src) => {
+        function downloadJSAtOnload() {
+            let element = document.createElement("script");
+            element.src = src;
+            document.body.appendChild(element);
+        }
+
+        if (window.addEventListener) window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent) window.attachEvent("onload", downloadJSAtOnload);
+        else window.onload = downloadJSAtOnload;
+    }
+
+    // jsOnLoad("client/js/app.js");
+    jsOnLoad("assets/js/client/app.js");
+    jsOnLoad("client/js/layouts/home.js");
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+//==================================================
+//?=== Header Font ==== == = -- -
+//==================================================
+
+$titles-font: ("6": "3.5", "7": "3", "8": "2.75", "9": "2.25");
+@each $key , $value  in $titles-font {
+    .c\:h#{$key} {
+        font-size: #{$value}rem;
+    }
+}
+
+
+
+
+
+
+///*==================================================
+//=== Font ==== == = -- -
+//==================================================*/
+@for $i from 8 through 60 {
+    .c\:f-#{$i}x {
+        font-size: #{$i}px;
+    }
+}
+
+
+
+///*==================================================
+//=== Limit Text ==== == = -- -
+//==================================================*/
+@for $i from 0 through 5 {
+    .c\:limitText-#{$i}{
+        display: -webkit-box;
+        -webkit-line-clamp: #{$i};
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+@each $b in map-keys($breakpoints) {
+    @include respond-to($b){
+        @for $i from 0 through 5 {
+            .c\:limitText-#{$b}-#{$i}{
+                display: -webkit-box;
+                -webkit-line-clamp: #{$i};
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+//==================================================
+//=== Line Height ==== == = -- -
+//==================================================
+@for $i from 9 through 20 {
+    $h : $i * 2;
+    .c\:line-h-#{$h}x{
+        line-height: #{$h}px;
+    }
+}
+
+
+
+///*==================================================
+//=== Letter Spacing ==== == = -- -
+//==================================================*/
+@for $i from 1 through 10 {
+    .c\:letter-sp-#{$i}x{
+        letter-spacing: #{$i}px;
+    }
+}

@@ -1,0 +1,250 @@
+@import 'config';
+
+
+@import 'reset';
+@import 'copied/copied';
+
+
+:root{
+    @each $key , $primary in $primaries {
+        --color-primary-#{$key} : #{$primary};
+    }
+}
+
+//colors
+@each $key , $primary in $primaries {
+    .bg-var-primary-#{$key} {
+        background-color: #{$primary};
+    }
+}
+
+
+
+body{
+    background-color: #f1f3f6;
+    font-family: 'Graphik' , sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+a:hover{
+    text-decoration: none;
+}
+a.nota{
+    color: inherit;
+    &:hover{
+        color: inherit;
+    }
+}
+
+
+
+
+
+
+@import "layouts/header";
+
+@import "layouts/footer";
+
+
+$radius-circle : 1000px;
+.shana\:btn {
+    border-radius: 0 $radius-circle $radius-circle $radius-circle;
+    font-weight: 400;
+    border: 1px solid transparent;
+    padding: 11px 22px;
+    @include media-md{
+        padding: 13px 34px;
+        font-size: 1rem;
+    }
+    transition: all .15s ease-in-out;
+    font-size: 0.7rem;
+
+    display: inline-block;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    line-height: 1.5;
+
+
+
+    &.shana\:btn-primary{
+        border: 2px solid #e9d9ff;
+        color: $font-color-light;
+        background-color: map-get($primaries , '500') ;//#703fc4
+    }
+}
+.shana\:title{
+    font-size: map-get($font-title , 'small');
+    @include media-md{
+        font-size: map-get($font-title , 'medium');
+    }
+    font-weight: bold;
+    line-height: $line-height-title;
+    color : $font-color-dark;
+    position: relative;
+}
+.shana\:title\:before:before{
+    content: '';
+    display: block;
+    height: 57px;
+    width: 57px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTciIHZpZXdCb3g9IjAgMCA1NiA1NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyOCIgY3k9IjI4LjA3MzciIHI9IjI0IiBzdHJva2U9IiNFNEU2RUEiIHN0cm9rZS13aWR0aD0iOCIvPjwvc3ZnPgo=');
+    position: absolute;
+    top: -20px;
+    left: -18px;
+    z-index: map-get($z-indexes , 'under');
+}
+.shana\:desc{
+    font-size: map-get($font-desc , 'medium');
+
+    @include media-lg{
+        font-size: map-get($font-desc , 'large');
+    }
+    font-weight: 400;
+    line-height: $line-height-base;
+    color: $font-color-desc;
+}
+
+.swiper-container{
+    a{
+        transition: all 0.3s ease-in-out;
+    }
+    .shana\:arrow-prev {
+        left: -30px !important;
+        &:after {
+            /*content: url("../img/icons/special-arrow-right.svg");*/
+            content: '' !important;
+        }
+    }
+    .shana\:arrow-next {
+        right: -30px !important;
+        &:after {
+            /*content: url("../img/icons/special-arrow-right.svg");*/
+            content: '' !important;
+        }
+    }
+
+    &.swiper-marquee{
+        .swiper-wrapper{
+            transition-timing-function: linear!important;
+        }
+    }
+}
+
+.shana\:card{
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color-light;
+    border-radius: map-get($radiuses , 'shana');
+
+    &>&-body{
+        padding: 10px 10px;
+
+        .shana\:card-title{
+            color: $font-color-dark;
+            font-size: map-get($font-card-title , "medium");
+            font-weight: weight('reg');
+            line-height: 1.7;
+            @include media-md{
+                font-size: map-get($font-card-title , "large");
+            }
+        }
+        .shana\:card-desc{
+            color: $font-color-sub;
+            font-size: map-get($font-card-desc , "small");
+            font-weight: weight();
+            line-height: 1.6;
+            @include media-md{
+                font-size: map-get($font-card-desc , "large");
+            }
+        }
+    }
+    &>&-footer{
+        margin-top: auto;
+        padding: 10px 15px;
+        .shana\:card-date{
+            color: $font-color-sub;
+            font-size: 13px;
+            font-weight: weight('med');
+        }
+    }
+
+
+
+    &-flex{
+        display: flex;
+        border-radius: map-get($radiuses , 'shana');
+        overflow: hidden;
+        background-color: $bg-color-light;
+        figure , .shana\:img-body{
+            img{
+                width: 100%;
+            }
+        }
+        .shana\:card-body{
+            padding: 15px 15px;
+
+            .shana\:card-title{
+                color: $font-color-dark;
+                font-size: map-get($font-title , "small");
+                font-weight: weight('bold');
+                line-height: 1.7;
+                @include media-md{
+                    font-size: map-get($font-title , "medium");
+                }
+            }
+            .shana\:card-desc{
+                color: $font-color-dark;
+                font-size: 17px;
+                font-weight: weight();
+                line-height: 2.8;
+                margin-top: 16px;
+            }
+        }
+
+        .shana\:card-footer{
+            margin-top: auto;
+            padding: 20px 15px 0;
+            .shana\:card-date{
+                color: $font-color-desc;
+                font-size: 16px;
+                font-weight: weight();
+            }
+        }
+    }
+}
+
+.shana\:col-pad{
+    padding-right: 7.5px;
+    padding-left : 7.5px;
+    margin-top   : 7.5px;
+    margin-bottom: 7.5px;
+}
+
+.fake-header{
+    height: 60px;
+    @include media-md{
+        height: 80px;
+    }
+}
+
+.page-title{
+    font-size: 20px;
+    font-weight : weight('bold');
+    @include media-md{
+        font-size: 28px;
+    }
+}
+
+.from-error{
+    color: red;
+    font-size: 13px;
+    display: block;
+    margin-top: 10px;
+}
+

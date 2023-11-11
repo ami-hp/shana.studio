@@ -1,0 +1,164 @@
+@import '../config';
+
+#index-section-head{
+    height: auto;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position-x: -200px;
+    background-position-y: -20px;
+    background-size: 190%;
+    @include media-md{
+        background-position-x: 100px;
+        background-position-y: top;
+        background-size: 60%;
+    }
+
+    .image{
+        width: 80%;
+        max-width: 480px;
+    }
+    .content-box{
+        position: absolute;
+        z-index: map-get($z-indexes , 'content');
+        .title{
+            max-width: 840px;
+            font-weight: bold;
+            font-size: 23px;
+            @include media-md{
+                font-size: 50px;
+            }
+            margin: 0 auto;
+            line-height: 1.3;
+        }
+        .desc-md{
+            max-width: 560px;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-left:auto;
+            margin-right: auto;
+        }
+    }
+
+    .desc{
+        width: 90%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.8;
+        margin-left:auto;
+        margin-right: auto;
+    }
+}
+
+
+
+.index-sec-1{
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 140%;
+    @include media-md{
+        background-size: 55%;
+    }
+}
+
+.overflow-hidden{
+    img.img-overflow{
+        width: 200%;
+        @include media-md{
+            width: 100%;
+        }
+    }
+}
+
+.index-sec-4{
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 140%;
+    @include media-md{
+        background-size: 55%;
+    }
+}
+
+.index-sec-5{
+    .col-box-row{
+        @include media-md{
+            &>div{
+                &:first-child{
+                    padding-right: 7.5px;
+                }
+                &:last-child{
+                    padding-left: 7.5px;
+                }
+            }
+        }
+        .col-box{
+            padding: 17px 25px;
+            width: 100%;
+            height: 100%;
+            border-radius: map-get($radiuses , 'shana');
+            background-color: $bg-color-light;
+
+            img, .col-icon{
+                height: 58px;
+            }
+            .title{
+                font-weight: weight('bold');
+                margin-left: 10px;
+            }
+        }
+        .desc{
+            line-height: $line-height-base;
+            color: $font-color-desc;
+
+        }
+    }
+}
+
+.index-sec-8{
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    //background-size: 140%;
+    //@include media-md{
+    //    background-size: 55%;
+    //}
+
+    .image{
+        width: 75%;
+        max-width: 265px;
+    }
+    .title{
+        font-size: 25px;
+        font-weight: bold;
+        color: map-get($primaries , '500');
+    }
+    .desc{
+        font-size: map-get($font-desc , 'small');
+        line-height: 2;
+        @include media-md{
+            font-size: map-get($font-desc , 'medium');
+            line-height: 2.2;
+        }
+        color: $font-color-desc;
+
+    }
+}
+
+.swiper-marquee-box{
+    .marquee-box{
+        width: 100%;
+        height: 100%;
+        border-radius: map-get($radiuses , 'shana');
+        overflow: hidden;
+        padding: 5px;
+        background-color: $bg-color-light;
+        video {
+            width: 100%;
+            height: 100%;
+            border-radius: map-get($radiuses , 'shana');
+            object-fit: contain;
+        }
+    }
+}

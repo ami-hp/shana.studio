@@ -1,0 +1,1 @@
+window.addEventListener("swal-contact-success",(function(){Swal.fire({icon:"success",title:" ",text:"Message's Been Sent Successfully",backdrop:!0,showDenyButton:!1,showCancelButton:!1,showConfirmButton:!1,timer:3e3})}));

@@ -1,0 +1,68 @@
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../../fonts/graphik/eot/Graphik-Regular.eot');
+    src: url('../../fonts/graphik/eot/Graphik-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/graphik/woff2/Graphik-Regular.woff2') format('woff2'),
+         url('../../fonts/graphik/woff/Graphik-Regular.woff') format('woff'),
+         url('../../fonts/graphik/ttf/Graphik-Regular.ttf') format('truetype'),
+         url('../../fonts/graphik/svg/Graphik-Regular.svg#Graphik-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../../fonts/graphik/eot/Graphik-Medium.eot');
+    src: url('../../fonts/graphik/eot/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/graphik/woff2/Graphik-Medium.woff2') format('woff2'),
+    url('../../fonts/graphik/woff/Graphik-Medium.woff') format('woff'),
+    url('../../fonts/graphik/ttf/Graphik-Medium.ttf') format('truetype'),
+    url('../../fonts/graphik/svg/Graphik-Medium.svg#Graphik-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../../fonts/graphik/eot/Graphik-Bold.eot');
+    src: url('../../fonts/graphik/eot/Graphik-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/graphik/woff2/Graphik-Bold.woff2') format('woff2'),
+         url('../../fonts/graphik/woff/Graphik-Bold.woff') format('woff'),
+         url('../../fonts/graphik/ttf/Graphik-Bold.ttf') format('truetype'),
+         url('../../fonts/graphik/svg/Graphik-Bold.svg#Graphik-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+.font-thin{
+    font-weight: 100;
+}
+.font-light{
+    font-weight: 300;
+}
+.font-reg{
+    font-weight: 400;
+}
+.font-med{
+    font-weight: 500;
+}
+.font-bold{
+    font-weight: bold;
+}
+.font-exbold{
+    font-weight: 800;
+}
+.font-black{
+    font-weight: 900;
+}
+.font-exblack{
+    font-weight: 950;
+}
+

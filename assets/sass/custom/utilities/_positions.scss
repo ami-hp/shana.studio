@@ -1,0 +1,81 @@
+//==================================================
+//=== Position ==== == = -- -
+//==================================================
+
+.c\:pos-unset{
+    position: unset;
+}
+.c\:pos-relative{
+    position: relative;
+}
+.c\:pos-fixed{
+    position: fixed;
+}
+.c\:pos-absolute{
+    position: absolute;
+}
+
+.c\:pos-0{
+    top:    0;
+    right:  0;
+    bottom: 0;
+    left:   0;
+}
+.c\:posy-0{
+    top:    0;
+    bottom: 0;
+}
+.c\:posx-0{
+    right:  0;
+    left:   0;
+}
+.c\:posl-0{
+    left:   0;
+}
+.c\:posr-0{
+    right:  0;
+}
+.c\:post-0{
+    top:    0;
+}
+.c\:posb-0{
+    bottom: 0;
+}
+
+.c\:post-100per{
+    top: 100%;
+}
+.c\:post-n100per{
+    top: -100%;
+}
+.c\:posr-100per{
+    right: 100%;
+}
+.c\:posr-n100per{
+    right: -100%;
+}
+.c\:posl-100per{
+    right: 100%;
+}
+.c\:posl-n100per{
+    right: -100%;
+}
+.c\:posb-100per{
+    bottom: 100%;
+}
+.c\:posb-n100per{
+    bottom: -100%;
+}
+
+///*==================================================
+//=== Z-index ==== == = -- -
+//==================================================*/
+.c\:z-on{
+    z-index:99999999999999999999999999999999999999999999999999999999;
+}
+@for $i from -1 through 100 {
+    $z: $i * 10;
+    .c\:z-#{$z} {
+        z-index: #{$z};
+    }
+}

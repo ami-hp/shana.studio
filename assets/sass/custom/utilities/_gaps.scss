@@ -1,0 +1,158 @@
+//==================================================
+//?=== Margin & Padding ==== == = -- -
+//==================================================
+.c\:mt-6 {
+    margin-top: 3.5rem;
+}
+.c\:mt-7 {
+    margin-top: 4rem;
+}
+.c\:mt-8 {
+    margin-top: 4.5rem;
+}
+.c\:mt-9 {
+    margin-top: 5rem;
+}
+.c\:mt-big {
+    margin-top: 10rem;
+}
+
+.c\:mb-6 {
+    margin-bottom: 3.5rem;
+}
+.c\:mb-7 {
+    margin-bottom: 4rem;
+}
+.c\:mb-8 {
+    margin-bottom: 4.5rem;
+}
+.c\:mb-9 {
+    margin-bottom: 5rem;
+}
+
+.c\:mb-big {
+    margin-bottom: 10rem;
+}
+@for $i from 1 through 25 {
+    $num : $i * 5;
+    $neg_num : $i * -5;
+    .c\:p-#{$num}x{
+        padding-top:    #{$num}px;
+        padding-right:  #{$num}px;
+        padding-bottom: #{$num}px;
+        padding-left:   #{$num}px;
+    }
+    .c\:py-#{$num}x{
+        padding-top:    #{$num}px;
+        padding-bottom: #{$num}px;
+    }
+    .c\:px-#{$num}x{
+        padding-right:  #{$num}px;
+        padding-left:   #{$num}px;
+    }
+    .c\:pl-#{$num}x{
+        padding-left:   #{$num}px;
+    }
+    .c\:pr-#{$num}x{
+        padding-right:  #{$num}px;
+    }
+    .c\:pt-#{$num}x{
+        padding-top:    #{$num}px;
+    }
+    .c\:pb-#{$num}x{
+        padding-bottom: #{$num}px;
+    }
+    .c\:pl-n#{$num}x{
+        padding-left:   #{$neg_num}px;
+    }
+    .c\:pr-n#{$num}x{
+        padding-right:  #{$neg_num}px;
+    }
+    .c\:pt-n#{$num}x{
+        padding-top:    #{$neg_num}px;
+    }
+    .c\:pb-n#{$num}x{
+        padding-bottom: #{$neg_num}px;
+    }
+
+    .c\:m-#{$num}x{
+        margin-top:    #{$num}px;
+        margin-right:  #{$num}px;
+        margin-bottom: #{$num}px;
+        margin-left:   #{$num}px;
+    }
+    .c\:my-#{$num}x{
+        margin-top:    #{$num}px;
+        margin-bottom: #{$num}px;
+    }
+    .c\:mx-#{$num}x{
+        margin-right:  #{$num}px;
+        margin-left:   #{$num}px;
+    }
+    .c\:ml-#{$num}x{
+        margin-left:   #{$num}px;
+    }
+    .c\:mr-#{$num}x{
+        margin-right:  #{$num}px;
+    }
+    .c\:mt-#{$num}x{
+        margin-top:    #{$num}px;
+    }
+    .c\:mb-#{$num}x{
+        margin-bottom: #{$num}px;
+    }
+
+    .c\:ml-n#{$num}x{
+        margin-left:   #{$neg_num}px;
+    }
+    .c\:mr-n#{$num}x{
+        margin-right:  #{$neg_num}px;
+    }
+    .c\:mt-n#{$num}x{
+        margin-top:    #{$neg_num}px;
+    }
+    .c\:mb-n#{$num}x{
+        margin-bottom: #{$neg_num}px;
+    }
+
+    .c\:pos-#{$num}x{
+        top:    #{$num}px;
+        right:  #{$num}px;
+        bottom: #{$num}px;
+        left:   #{$num}px;
+    }
+    .c\:posy-#{$num}x{
+        top:    #{$num}px;
+        bottom: #{$num}px;
+    }
+    .c\:posx-#{$num}x{
+        right:  #{$num}px;
+        left:   #{$num}px;
+    }
+    .c\:posl-#{$num}x{
+        left:   #{$num}px;
+    }
+    .c\:posr-#{$num}x{
+        right:  #{$num}px;
+    }
+    .c\:post-#{$num}x{
+        top:    #{$num}px;
+    }
+    .c\:posb-#{$num}x{
+        bottom: #{$num}px;
+    }
+
+    .c\:posl-n#{$num}x{
+        left:   #{$neg_num}px;
+    }
+    .c\:posr-n#{$num}x{
+        right:  #{$neg_num}px;
+    }
+    .c\:post-n#{$num}x{
+        top:    #{$neg_num}px;
+    }
+    .c\:posb-n#{$num}x{
+        bottom: #{$neg_num}px;
+    }
+
+}

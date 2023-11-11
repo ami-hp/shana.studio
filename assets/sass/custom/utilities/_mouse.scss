@@ -1,0 +1,13 @@
+
+///*==================================================
+//=== Cursor ==== == = -- -
+//==================================================*/
+.c\:url{
+    /*cursor:url(cursor.cur),auto;*/
+}
+$cursors: none, default, grab, pointer, pointer, not-allowed, wait;
+@each $cursor in $cursors {
+    .c\:cursor-#{$cursor} {
+        cursor: #{$cursor};
+    }
+}

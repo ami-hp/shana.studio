@@ -1,0 +1,38 @@
+//==================================================
+//=== Radius ==== == = -- -
+//==================================================
+.c\:rounded-unset{
+    border-radius:unset!important;
+}
+@for $i from 1 through 20 {
+    $r : ($i * 5);
+    $per : percentage($i * 5)/100;
+
+    .c\:rounded-#{$r}x{
+        border-radius:#{$r}px;
+    }
+    .c\:rounded-#{$r}\%{
+        border-radius:#{$per};
+    }
+
+
+    .c\:rounded-cw-#{$r}x{
+        border-radius: #{$r}px 0;
+    }
+    .c\:rounded-ccw-#{$r}x{
+        border-radius: 0 #{$r}px;
+    }
+    .c\:rounded-r-#{$r}x{
+        border-radius: 0 #{$r}px #{$r}px 0;
+    }
+    .c\:rounded-l-#{$r}x{
+        border-radius: #{$r}px 0 0 #{$r}px;
+    }
+    .c\:rounded-b-#{$r}x{
+        border-radius: 0 0 #{$r}px #{$r}px;
+    }
+    .c\:rounded-t-#{$r}x{
+        border-radius: #{$r}px #{$r}px 0 0;
+    }
+
+}

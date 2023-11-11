@@ -1,0 +1,119 @@
+@import '../config';
+
+.contact-about{
+    .title{
+        position: relative;
+        color: map-get($primaries , '500');
+        font-weight: map-get($font-weights , 'bold');
+        font-size: 28px;
+        @include respond-to('md'){
+            font-size: 37px;
+        }
+        padding-bottom: 15px;
+        &.title\:line:after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg,
+                transparent 0%,
+                map-get($primaries , '500') 30%,
+                map-get($primaries , '500') 70%,
+                transparent 100%);
+        }
+    }
+    .desc{
+        line-height: map-get($line-heights , 'desc');
+        @include respond-to('md'){
+            line-height: map-get($line-heights , 'desc-md');
+        }
+    }
+
+    .contact{
+
+        .contact-box{
+            background-color: $bg-color-light;
+            padding: 26px 14px;
+            @include respond-to('md'){
+                padding: 63px 84px;
+            }
+            border-radius: map-get($radiuses , 'shana');
+            .contact-form-title{
+                font-size: 16px;
+                font-weight: weight('med');
+            }
+            .contact-form {
+
+            }
+
+            .contact-info{
+                font-size: 17px;
+                font-weight: weight();
+                line-height: $line-height-title;
+                .socials{
+                    a:not(:last-child){
+                        margin-right: 15px;
+                    }
+                }
+                .map iframe{
+                    max-width: 100%;
+                    border-radius: map-get($radiuses , 'shana')
+                }
+            }
+        }
+
+    }
+}
+
+.shana\:form{
+
+    .shana\:form-group{
+        width: 100%;
+        .shana\:on-the-line{
+            position: absolute;
+            font-size: 13px;
+            top: -7px;
+            left: 11px;
+            background-color: $bg-color-light;
+            padding: 0 7px;
+        }
+    }
+
+    & &-control{
+        width: 100%;
+        padding: 15px;
+        -webkit-border-radius: map-get($radiuses , 'form');
+        -moz-border-radius: map-get($radiuses , 'form');
+        border-radius: map-get($radiuses , 'form');
+        border: 1px solid #b4bec8;
+        transition: all 0.3s;
+        &:focus{
+            box-shadow: 0 0 0 3px rgba(map-get($primaries , '300') , 0.5);
+            outline: unset;
+        }
+        &::placeholder{
+            color: $font-color-sub;
+        }
+    }
+    .shana\:form-btn{
+        color: $font-color-light;
+        font-size: 16px;
+        font-weight: weight('bold');
+        background-color: map-get($primaries , '500');
+        padding: 15px 0;
+        @include respond-to('md'){
+            padding: 30px 0;
+        }
+        width: 100%;
+        border-radius: map-get($radiuses , 'circle');
+        border: unset;
+        transition: all 0.3s;
+        &:focus{
+            box-shadow: 0 0 0 3px rgba(map-get($primaries , '300') , 0.5);
+            outline: unset;
+        }
+    }
+}

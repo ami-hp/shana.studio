@@ -1,0 +1,49 @@
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 1px;
+}
+
+::-webkit-scrollbar:hover {
+    opacity: 1;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0d3f92;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
+
+}
+
+.scroll-trans::-webkit-scrollbar {
+    width: 1px;
+}
+
+.scroll-trans::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scroll-trans::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.scroll-trans::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: lighten(map-get($primaries , '500') , 10%);
+}
+
+::selection {
+    color: white;
+    background: lighten(map-get($primaries , '500') , 10%);
+}

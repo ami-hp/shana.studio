@@ -1,0 +1,47 @@
+//! scss-docs-start mixin-color-scheme
+@mixin color-scheme($name) {
+    @media (prefers-color-scheme: #{$name}) {
+        @content;
+    }
+}
+//! scss-docs-end mixin-color-scheme
+@mixin limitText($num){
+    display: -webkit-box;
+    -webkit-line-clamp: #{$num};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+//! scss-docs-start color-functions
+// Tint a color: mix a color with white
+@function tint-color($color, $weight) {
+    @return mix(white, $color, $weight);
+}
+
+// Shade a color: mix a color with black
+@function shade-color($color, $weight) {
+    @return mix(black, $color, $weight);
+}
+
+// Shade the color if the weight is positive, else tint it
+@function shift-color($color, $weight) {
+    @return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight));
+}
+//! scss-docs-end color-functions
+
+
+
+
+@function color ($color_array , $key){
+    @return map-get($color_array, $key);
+}
+
+@function purple($key: "500") {
+    @return map-get($purples, $key);
+}
+
+@function weight($weight: "reg") {
+    @return map-get($font-weights, $weight);
+}
+
+

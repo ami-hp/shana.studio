@@ -1,0 +1,119 @@
+$breakpoints: (
+    'fold':  ( max-width: 280px ),
+    'xxs' :  ( max-width: 320px ),
+    'xs'  :  ( max-width: 575px ),
+    'sm'  :  ( min-width: 576px ),
+    'md'  :  ( min-width: 768px ),
+    'lg'  :  ( min-width: 992px ),
+    'li'  :  ( min-width: 1024px ),
+    'xl'  :  ( min-width: 1200px ),
+    'xxl' :  ( min-width: 1400px ),
+) !default;
+
+
+// Extra small devices | Portrait Phones
+@mixin media-fold {
+    @media (max-width: 280px) {
+        @content;
+    }
+}
+
+// Extra small devices | Portrait Phones
+@mixin media-xxs {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+// Extra small devices | Portrait Phones
+@mixin media-xs {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+// Small devices | Landscape Phones
+@mixin media-sm-mid {
+    @media (min-width: 576px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+// Medium devices | Tablets
+@mixin media-md-mid {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// Large devices | Desktops
+@mixin media-lg-mid {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+// ipad devices | iPad
+@mixin media-li {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+// Extra large devices | Large Desktops
+@mixin media-xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+// Extra Extra large devices | Larger Desktops
+@mixin media-xxl {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+
+        // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+
+// @include media-xxs {}
+
